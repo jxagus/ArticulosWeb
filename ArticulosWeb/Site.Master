@@ -50,9 +50,9 @@
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Explorar">Explorar</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Perfil">Mi Cuenta</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Guardados">Mis Favoritos</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Soporte">Contacto / Soporte</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Mis Favoritos">Mis Favoritos</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contacto">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Usuario">Usuario</a></li>
 
 
