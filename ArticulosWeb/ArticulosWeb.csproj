@@ -99,7 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Contacto.aspx" />
+    <Content Include="Preguntas.aspx" />
     <Content Include="Explorar.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -188,12 +188,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="Contacto.aspx.cs">
-      <DependentUpon>Contacto.aspx</DependentUpon>
+    <Compile Include="Preguntas.aspx.cs">
+      <DependentUpon>Preguntas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contacto.aspx.designer.cs">
-      <DependentUpon>Contacto.aspx</DependentUpon>
+    <Compile Include="Preguntas.aspx.designer.cs">
+      <DependentUpon>Preguntas.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Explorar.aspx.cs">
