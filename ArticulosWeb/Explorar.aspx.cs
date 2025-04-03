@@ -5,16 +5,18 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using NegocioArticulo;
+using Dominio;
 
 namespace ArticulosWeb
 {
     public partial class Contact : Page
     {
+        public List<Articulo> ListaArticulos { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             Negocio Articulos = new Negocio();
-            dgvArticulos.DataSource = Articulos.listarConSP();
-            dgvArticulos.DataBind(); //Enlace los datos
+            ListaArticulos = Articulos.listarConSP();
+            
         }
     }
 }
