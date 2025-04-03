@@ -99,6 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Img\NoDisponible.jpg" />
     <Content Include="Preguntas.aspx" />
     <Content Include="Explorar.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
