@@ -4,7 +4,8 @@
 
 <html lang="es">
 <head runat="server">
-    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,6 +55,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Mis Favoritos">Mis Favoritos</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Preguntas">Preguntas</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Usuario">Usuario</a></li>
 
 
