@@ -99,8 +99,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\custom-style.css" />
     <Content Include="FormularioArticulo.aspx" />
+    <Content Include="Img\BackGround.png" />
+    <Content Include="Img\Fondo.jpg" />
+    <Content Include="Img\index.png" />
     <Content Include="Img\NoDisponible.jpg" />
+    <Content Include="Img\test.jpg" />
     <Content Include="Lista.aspx" />
     <Content Include="Preguntas.aspx" />
     <Content Include="Explorar.aspx" />

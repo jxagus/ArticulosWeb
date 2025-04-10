@@ -5,7 +5,23 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.home-page {
+    background-image: url('../Images/tu-fondo.jpg'); /* si tenías una imagen */
+    background-color: #3f2b23; /* o el color de fondo que querías */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* para cubrir toda la pantalla */
+}
+.hero-section {
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+}
 
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px 20px;
+}
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,
@@ -18,4 +34,7 @@ textarea {
     .body-content {
         padding: 0;
     }
+}
+.home .body-content {
+    margin-top: 0;
 }

@@ -6,11 +6,14 @@
 <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <%--poner todo color marron bebe--%>
+    <link href="Content/custom-style.css" rel="stylesheet" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Articles </title>
-    
+
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -20,7 +23,9 @@
     <link href="Img/Caja.png" rel="shortcut icon" />
 
 </head>
-<body>
+
+<body runat="server" class='<%: Page.AppRelativeVirtualPath.Equals("~/Default.aspx", StringComparison.OrdinalIgnoreCase) ? "home" : "" %>'>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -63,14 +68,30 @@
                 </div>
             </div>
         </nav>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+        <!-- contenido de ancho completo -->
+        <asp:ContentPlaceHolder ID="FullWidthContent" runat="server" />
+
+<div class="container body-content">
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    <hr />
+</div>
+
+
+        <%-- Footer diferente segn la página --%>
+        <% if (Page.AppRelativeVirtualPath.Equals("~/Default.aspx", StringComparison.OrdinalIgnoreCase))
+            { %>
+        <footer style="width: 100%; background-color: #3f2b23; color: white; text-align: center; padding: 10px 0;">
+            <p>&copy; 2025 - Mi aplicación ASP.NET</p>
+        </footer>
+        <% }
+            else
+            { %>
+        <div class="container">
+            <footer style="background-color: #3f2b23; color: white; text-align: center; padding: 10px 0;">
+                <p>&copy; 2025 - Mi aplicación ASP.NET</p>
             </footer>
         </div>
+        <% } %>
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
