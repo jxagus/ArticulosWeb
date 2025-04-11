@@ -19,7 +19,7 @@ namespace ArticulosWeb
 		}
 		protected void txtImagenUrl_TextChanged(object sender, EventArgs e)
 		{
-			imgArticulo.ImageUrl = txtImagenUrl.Text;
+            imgArticulo.ImageUrl = txtImagenUrl.Text;
 		}
 	}
 }

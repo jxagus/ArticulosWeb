@@ -4,49 +4,67 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
+        <!-- Columna del formulario -->
         <div class="col-6">
             <div class="mb-3">
                 <label for="txtNombre" class="form-label">Nombre</label>
-                <asp:TextBox runat="server" ID="txtNombre" CssClass="form-select" />
+                <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="txtCodigo" class="form-label">Código</label>
+                <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" />
             </div>
             <div class="mb-3">
-                <label for="txtCodigo" class="form-label">Codigo</label>
-                <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-select" />
+                <label for="ddlMarca" class="form-label">Marca</label>
+                <asp:DropDownList ID="ddlMarca" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Seleccione una marca" Value="" />
+                    <asp:ListItem Text="Sony" Value="1" />
+                    <asp:ListItem Text="Samsung" Value="2" />
+                    <asp:ListItem Text="LG" Value="3" />
+                </asp:DropDownList>
             </div>
+
             <div class="mb-3">
-                <label for="txtDescripcion" class="form-label">Descripcion</label>
-                <asp:TextBox runat="server" TextMode="MultiLine" ID="txtDescripcion" CssClass="form-control" />
+                <label for="ddlCategoria" class="form-label">Categoría</label>
+                <asp:DropDownList ID="ddlCategoria" runat="server" CssClass="form-select">
+                    <asp:ListItem Text="Seleccione una categoría" Value="" />
+                    <asp:ListItem Text="Audio" Value="1" />
+                    <asp:ListItem Text="Video" Value="2" />
+                    <asp:ListItem Text="Accesorios" Value="3" />
+                </asp:DropDownList>
             </div>
             <div class="mb-3">
                 <label for="txtPrecio" class="form-label">Precio</label>
                 <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" />
             </div>
             <div class="mb-3">
-                <label for="txtMarca" class="form-label">Marca</label>
-                <asp:TextBox runat="server" ID="txtMarca" CssClass="form-control" />
-            </div>
-            <div class="mb-3">
-                <label for="txtCategoria" class="form-label">Precio</label>
-                <asp:ListBox ID="txtCategoria" runat="server"></asp:ListBox>
-            </div>
-            <div class="mb-3">
                 <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="btnAceptar_Click" />
-                <a href="Lista.aspx">Cancelar</a>
+                <a href="Lista.aspx" class="btn btn-secondary ms-2">Cancelar</a>
             </div>
         </div>
+
+        <!--Columna para la imagen !-->
         <div class="col-6">
             <div class="mb-3">
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                <ContentTemplate>
-                    <div class="mb-3">
-                        <label for="txtImagenUrl" runat="server" Text="Label">UrlImagen</label>
-                        <asp:TextBox ID="txtImagenUrl" CssClass="form-control" runat="server"
-                            autoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged"/>
-                    </div>
-                    <asp:Image ID="imgArticulo" Width="60%" runat="server" />
-                </ContentTemplate>
-            </asp:UpdatePanel>      
+                <div class="mb-3">
+                    <label for="txtDescripcion" class="form-label">Descripción</label>
+                    <asp:TextBox runat="server" ID="txtDescripcion" TextMode="MultiLine" CssClass="form-control" />
+                </div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div class="mb-3">
+                            <label for="txtImagenUrl" runat="server" text="Label">Link de imagen</label>
+                            <asp:TextBox ID="txtImagenUrl" CssClass="form-control" runat="server"
+                                AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged" />
+                        </div>
+                        <asp:Image ID="imgArticulo" runat="server" ImageUrl="Img/Foto.png" Width="60%" />
+
+
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
         </div>
     </div>
+
 </asp:Content>
