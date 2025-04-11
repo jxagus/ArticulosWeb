@@ -13,5 +13,13 @@ namespace ArticulosWeb
 		{
 
 		}
+		protected void btnAceptar_Click(object sender, EventArgs e)
+		{
+
+		}
+		protected void txtImagenUrl_TextChanged(object sender, EventArgs e)
+		{
+			imgArticulo.ImageUrl = txtImagenUrl.Text;
+		}
 	}
 }

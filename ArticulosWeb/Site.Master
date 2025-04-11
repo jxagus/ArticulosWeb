@@ -71,10 +71,10 @@
         <!-- contenido de ancho completo -->
         <asp:ContentPlaceHolder ID="FullWidthContent" runat="server" />
 
-<div class="container body-content">
-    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-    <hr />
-</div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            <hr />
+        </div>
 
 
         <%-- Footer diferente segn la página --%>
