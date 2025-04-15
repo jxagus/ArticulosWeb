@@ -42,6 +42,8 @@
                 <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="btnAceptar_Click" />
                 <a href="Lista.aspx" class="btn btn-secondary ms-2">Cancelar</a>
             </div>
+            <asp:Label ID="lblError" runat="server" ForeColor="Red" />
+
         </div>
 
         <!--Columna para la imagen !-->
