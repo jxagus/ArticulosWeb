@@ -100,5 +100,28 @@ namespace ArticulosWeb
 		{
             imgArticulo.ImageUrl = txtImagenUrl.Text;
 		}
-	}
+        protected void btnEliminar_Click(object sender, EventArgs e)
+		{
+			ConfirmarEliminacion = true;
+		}
+
+        protected void btnConfirmacionEliminacion_Click(object sender, EventArgs e)
+        {
+			try
+			{
+				if (chkConfirmaEliminacion.Checked)
+				{
+					Negocio negocio = new Negocio();
+                    int id = int.Parse(Request.QueryString["id"]);
+                    negocio.eliminar(id);
+                    Response.Redirect("Lista.aspx");
+				}
+			}
+			catch (Exception ex)
+			{
+
+				Session.Add("errrrror", ex);
+			}
+        }
+    }
 }
