@@ -26,9 +26,9 @@
             <div class="mb-3">
                 <asp:Label Text="Campo" ID="lblCampo" runat="server" />
                 <asp:DropDownList runat="server" AutoPostBack="true" CssClass="form-control" ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
+                    <asp:ListItem Text="Precio" />
                     <asp:ListItem Text="Nombre" />
-                    <asp:ListItem Text="Tipo" />
-                    <asp:ListItem Text="Número" />
+                    <asp:ListItem Text="Descripcion" />
                 </asp:DropDownList>
             </div>
         </div>
@@ -61,7 +61,8 @@
         AllowPaging="True" PageSize="5">
         <Columns>
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-            <asp:BoundField HeaderText="Categoria" DataField="Categoria" />
+            <asp:BoundField HeaderText="Categoria" DataField="Categoria" />                   
+            <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
             <asp:BoundField HeaderText="Precio" DataField="Precio" />
             <asp:CommandField HeaderText="Accion" ShowSelectButton="true" SelectText="✍️" />
         </Columns>
