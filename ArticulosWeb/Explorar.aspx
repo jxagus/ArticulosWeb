@@ -2,7 +2,11 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h1>Lista de artículos</h1>
-
+        <div class="col-6">
+        <div class="mb-3">
+            
+        </div>
+    </div>
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <% foreach (Dominio.Articulo item in ListaArticulos) { %>
         <div class="col">

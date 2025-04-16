@@ -41,6 +41,8 @@
             <div class="mb-3">
                 <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary" OnClick="btnAceptar_Click" />
                 <a href="Lista.aspx" class="btn btn-secondary ms-2">Cancelar</a>
+                <asp:Button ID="btnInactivar" runat="server" Text="Inactivar" CssClass="btn btn-warning" OnClick="btnInactivar_Click" />
+
             </div>
             <asp:Label ID="lblError" runat="server" ForeColor="Red" />
 
@@ -77,12 +79,12 @@
                         <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" OnClick="btnEliminar_Click" CssClass="btn btn-danger" />
                         </div>
                              <% if (ConfirmarEliminacion)
-                                {%>
-                                <div class="col-3">
-                                    <asp:CheckBox ID="chkConfirmaEliminacion" runat="server" texto="Confirma eliminación" />
-                                    <asp:Button ID="btnConfirmacionEliminacion" OnClick="btnConfirmacionEliminacion_Click"  runat="server" Text="Eliminar" CssClass="btn btn-outline-danger" />
-                                </div>
-                                 <%} %>
+                                 {%>
+                        <div class="col-3">
+                            <asp:CheckBox ID="chkConfirmaEliminacion" runat="server" texto="Confirma eliminación" />
+                            <asp:Button ID="btnConfirmacionEliminacion" OnClick="btnConfirmacionEliminacion_Click" runat="server" Text="Eliminar" CssClass="btn btn-outline-danger" />
+                        </div>
+                        <%} %>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>

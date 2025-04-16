@@ -123,5 +123,20 @@ namespace ArticulosWeb
 				Session.Add("errrrror", ex);
 			}
         }
+
+        protected void btnInactivar_Click(object sender, EventArgs e)
+        {
+			try
+			{
+                Negocio negocio = new Negocio();
+                int id = int.Parse(Request.QueryString["id"]);
+                Response.Redirect("Lista.aspx");
+            }
+            catch (Exception ex)
+			{
+
+                Session.Add("errrrror", ex);
+            }
+        }
     }
 }
