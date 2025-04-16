@@ -68,5 +68,16 @@
             </div>
         </div>
     </div>
-
+    <!--Boton de eliminar !-->
+    <div class="row">
+        <div class="col-6">
+            <div class="col-3">
+                <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="btn btn-danger" />
+            </div>
+            <div class="col-3">
+                <asp:CheckBox ID="chkConfirmaEliminacion" runat="server" texto="Confirma eliminación"/>
+                <asp:Button ID="btnConfirmacionEliminacion" runat="server" Text="Eliminar" CssClass="btn btn-outline-danger" />
+            </div>
+        </div>
+    </div>
 </asp:Content>
