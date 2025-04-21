@@ -1,5 +1,4 @@
-﻿
-/* Fondo general del body */
+﻿/* Fondo general del body */
 body {
     background-color: #f4e7d4 !important;
     color: #2c1d12;
@@ -10,14 +9,14 @@ body {
     background-color: #5a3e2b !important;
 }
 
-/* Links dentro del navbar */
-.navbar .nav-link {
-    color: #f4e7d4 !important;
-}
+    /* Links dentro del navbar */
+    .navbar .nav-link {
+        color: #f4e7d4 !important;
+    }
 
-.navbar .nav-link:hover {
-    color: #ffc9a0 !important;
-}
+        .navbar .nav-link:hover {
+            color: #ffc9a0 !important;
+        }
 
 /* Botones principales */
 .btn-danger {
@@ -25,10 +24,10 @@ body {
     border-color: #b3472c;
 }
 
-.btn-danger:hover {
-    background-color: #a23d24;
-    border-color: #a23d24;
-}
+    .btn-danger:hover {
+        background-color: #a23d24;
+        border-color: #a23d24;
+    }
 
 /* Footer */
 footer {
@@ -37,14 +36,34 @@ footer {
     padding: 1rem;
     text-align: center;
     margin-top: 2rem;
+    flex-shrink: 0;
+    width: 100%;
 }
 
+/* Para forzar footer al fondo */
 html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+    /* Asegura que el contenido tome el espacio disponible */
+    body > form > .d-flex {
+        min-height: 100vh;
+    }
+
+/* Opcional, si querés darle un fondo marrón clarito */
+body {
+    background-color: #f4e7d4;
 }
 
+.body-content {
+    flex: 1 0 auto;
+}
+
+/* Sección de inicio con imagen */
 .hero-section {
     position: relative;
     width: 100%;
@@ -54,8 +73,8 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    margin-bottom: 5rem; /* Esto separa el footer de la imagen */
-    image-rendering: auto; /* o 'crisp-edges', depende del navegador */
+    margin-bottom: 5rem;
+    image-rendering: auto;
     background-attachment: scroll;
     background-position: center center;
 }
@@ -74,6 +93,7 @@ html, body {
     max-width: 600px;
 }
 
+/* Estilo de fondo para la home */
 body.home {
     background-image: url('/img/index.png');
     background-size: cover;
@@ -84,11 +104,11 @@ body.home {
     padding: 0;
 }
 
-body.home .body-content {
-   background-color: transparent;
-   padding: 0;
-   margin: 0;
-}
+    body.home .body-content {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
 
     body.home footer {
         width: 100%;
