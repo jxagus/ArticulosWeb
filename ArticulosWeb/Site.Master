@@ -54,7 +54,7 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Explorar">Explorar</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Preguntas">Preguntas</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Usuario">Usuario</a></li>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="Login.aspx">Login</a></li>
                             <!--Cosas para agregar despues 
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a></li>
                                 <li class="nav-item"><a class="nav-link" runat="server" href="~/Mis Favoritos">Mis Favoritos</a></li>
