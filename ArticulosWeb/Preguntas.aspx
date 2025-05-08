@@ -49,12 +49,16 @@
 
             </div>
         </div>
-
+        <!-- Contacto -->
         <div class="contact-form" style="margin-top: 50px;">
             <div class="mb-3" style="margin-top: 50px;">
                 <h5>Si desea hacer una pregunta en particular, puede escribirnos a soporte tecnico</h5>
                 <label for="txtEmail" class="form-label">Escriba su email</label>
                 <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" Placeholder="name@example.com" TextMode="Email"></asp:TextBox>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Asunto</label>
+                <asp:textbox runat="server" ID="txtAsunto" cssclass="form-control"/>
             </div>
             <div class="mb-3">
                 <label for="txtMensaje" class="form-label">Escriba un mensaje</label>
