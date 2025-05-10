@@ -11,7 +11,7 @@ namespace ArticulosWeb
 {
 
 
-    public partial class Usuario
+    public partial class Error
     {
     }
 }

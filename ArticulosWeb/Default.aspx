@@ -1,19 +1,13 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ArticulosWeb._Default" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <div class="rounded float-start">
-            <h1 id="aspnetTitle" >Articles Shop</h1>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="hero-section mb-5">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="display-4 fw-bold">Articles Shop</h1>
+                <p class="lead">Bienvenidos a la página número 1# de venta de artículos de la Argentina</p>
+                <a href="Explorar.aspx" class="btn btn-danger btn-lg mt-3">Ver ahora mismo</a>
             </div>
-            <p class="lead">Bienvenidos a la pagina numero 1# venta de articulos de la Argentina</p>
-                <div class="d-flex" style="height: 200px;">
-                <img src="img/caja.png" alt="Imagen grande" class="rounded float-end">
-             </div>
-
-
-        </section>
-    </main>
-
+        </div>
+    </div>
 </asp:Content>
