@@ -54,12 +54,16 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Explorar">Explorar</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Preguntas">Preguntas</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="Login.aspx">Login</a></li>
                             <!--Cosas para agregar despues 
+                            <li class="nav-item"><a class="nav-link" runat="server" href="Login.aspx">Login</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a></li>
                                 <li class="nav-item"><a class="nav-link" runat="server" href="~/Mis Favoritos">Mis Favoritos</a></li>
-                            -->
+                            -->                            
                         </ul>
+                    </div>
+                    <div class="d-flex">
+                        <a href="Login.aspx" class="btn btn-success me-2">Login</a>
+                         <a href="Registro.aspx" class="btn btn-outline-primary m-auto">Registrarse</a>
                     </div>
                 </div>
             </nav>

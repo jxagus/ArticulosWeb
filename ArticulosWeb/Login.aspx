@@ -6,7 +6,6 @@
         <div class="mb-3">
             <label class="form-label">User</label>
             <asp:TextBox runat="server" ID="txtUser" placeholder="user name" CssClass="form-control" />
-            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
         </div>
         <div class="mb-3">
             <label class="form-label">Password</label>
@@ -15,7 +14,7 @@
         <div class="mb-3 form-check">
         </div>
         <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-primary" />
-        <a href="#">Registrarme</a>
+        <a href="Default.aspx">Cancelar</a>
     </div>
 
 </asp:Content>
