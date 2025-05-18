@@ -5,8 +5,9 @@
 <html lang="es">
 <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server" />
-    <link href="Content/custom-style.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--aca va el custom.stile.css -->
+    <link href="Content/custom-style.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Articles</title>
@@ -14,7 +15,7 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" /> <!--ojo con este gato -->
     <link href="Img/Caja.png" rel="shortcut icon" />
 </head>
 
@@ -77,7 +78,7 @@
         </div>
 
         <!-- Footer SIEMPRE abajo -->
-        <footer style="width: 100%; background-color: #3f2b23; color: white; text-align: center; padding: 10px 0;">
+        <footer style="width: 100%; background-color: #2a2a2a; color: white; text-align: center; padding: 10px 0;">
             <p>&copy; 2025 - Mi aplicación ASP.NET</p>
         </footer>
 
