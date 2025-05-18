@@ -19,6 +19,10 @@ body {
             color: #ffc9a0 !important;
         }
 
+.hero-section {
+    padding-top: 80px; /* espacio para que no lo tape el navbar */
+}
+
 /* Botones principales */
 .btn-danger {
     background-color: #b3472c;
