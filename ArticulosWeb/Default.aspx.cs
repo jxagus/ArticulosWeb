@@ -11,12 +11,17 @@ namespace ArticulosWeb
 {
     public partial class _Default : Page
     {
-        public List<Articulo> ListaArticulos { get; set; }
+        public List<Articulo> ListaArticulos { get; set; } // Todos
+        public List<Articulo> ListaCelulares { get; set; } // Solo celulares
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Negocio Articulos = new Negocio();
-            ListaArticulos = Articulos.listarConSP();
-
+            if (!IsPostBack)
+            {
+                Negocio negocio = new Negocio();
+                ListaArticulos = negocio.listarConSP();
+                ListaCelulares = negocio.ListarCelulares(); 
+            }
         }
     }
 }

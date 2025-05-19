@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ArticulosWeb._Default" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="hero-section" style="margin-top: 5px;">
         <div class="hero-overlay">
@@ -10,14 +11,12 @@
         </div>
     </div>
     <!-- test explorar -->
-        <h1>Lista de artículos</h1>
-        <div class="col-6">
-        <div class="mb-3">
-            
-        </div>
-    </div>
-<div class="row row-cols-1 row-cols-md-3 g-4">
-    <% foreach (Dominio.Articulo item in ListaArticulos) { %>
+
+    <!-- Ofertas unicas en Iphones -->
+    <h1>Celulares</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% foreach (Dominio.Articulo item in ListaCelulares)
+            { %>
         <div class="col">
             <div class="card">
                 <%
@@ -27,11 +26,10 @@
                         imagenUrl = "Img/NoDisponible.jpg";
                     }
                 %>
-                <img src="<%: imagenUrl %>" 
-                     class="img-thumbnail" 
-                     style="height: 200px; width: 100%; object-fit: contain; background-color: #f8f9fa;" 
-                     alt="Imagen del artículo">
-                     
+                <img src="<%: imagenUrl %>" class="img-thumbnail"
+                    style="height: 200px; width: 100%; object-fit: contain; background-color: #f8f9fa;"
+                    alt="Imagen del artículo">
+
                 <div class="card-body">
                     <h5 class="card-title"><%: item.Nombre %></h5>
                     <p class="card-text"><%: item.Descripcion %></p>
@@ -39,6 +37,39 @@
                 </div>
             </div>
         </div>
-    <% } %>
-</div>
+        <% } %>
+    </div>
+
+    <!-- Nuestros productos destacados -->
+    <h1>Nuestros productos destacados</h1>
+    <div class="col-6">
+        <div class="mb-3">
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <% foreach (Dominio.Articulo item in ListaArticulos)
+            { %>
+        <div class="col">
+            <div class="card">
+                <%
+                    string imagenUrl = string.IsNullOrEmpty(item.ImagenUrl) ? "Img/NoDisponible.jpg" : item.ImagenUrl;
+                    if (!imagenUrl.StartsWith("https"))
+                    {
+                        imagenUrl = "Img/NoDisponible.jpg";
+                    }
+                %>
+                <img src="<%: imagenUrl %>"
+                    class="img-thumbnail"
+                    style="height: 200px; width: 100%; object-fit: contain; background-color: #f8f9fa;"
+                    alt="Imagen del artículo">
+
+                <div class="card-body">
+                    <h5 class="card-title"><%: item.Nombre %></h5>
+                    <p class="card-text"><%: item.Descripcion %></p>
+                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
 </asp:Content>
