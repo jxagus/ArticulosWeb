@@ -109,6 +109,7 @@
     <Content Include="Img\NoDisponible.jpg" />
     <Content Include="Img\Foto.png" />
     <Content Include="Img\test.jpg" />
+    <Content Include="Img\usuarioDefault.jpg" />
     <Content Include="Lista.aspx" />
     <Content Include="Preguntas.aspx" />
     <Content Include="Explorar.aspx" />

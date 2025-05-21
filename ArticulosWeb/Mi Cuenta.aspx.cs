@@ -28,7 +28,7 @@ namespace ArticulosWeb
                         txtApellido.Text = user.Apellido;
                         txtFechaNacimiento.Text = user.FechaNacimiento.ToString("yyyy-MM-dd");
                         if (!string.IsNullOrEmpty(user.ImagenPerfil))
-                            imgNuevoPerfil.ImageUrl = "~/Images/" + user.ImagenPerfil;
+                            imgNuevoPerfil.ImageUrl = "./Img/Perfil" + user.ImagenPerfil;
                     }
                 }
 
@@ -49,7 +49,7 @@ namespace ArticulosWeb
                     return;
 
                 UsuarioNegocio negocio = new UsuarioNegocio();
-                Usuario user = (Usuario)Session["trainee"];
+                Usuario user = (Usuario)Session["usuario"];
                 //Escribir img si se cargó algo.
                 if (txtImagen.PostedFile.FileName != "")
                 {
@@ -63,11 +63,11 @@ namespace ArticulosWeb
                 user.FechaNacimiento = DateTime.Parse(txtFechaNacimiento.Text);
 
                 //guardar datos perfil
-                //negocio.actualizar(user);
+                negocio.actualizar(user);
 
                 //leer img
                 Image img = (Image)Master.FindControl("imgAvatar");
-                img.ImageUrl = "~/Images/" + user.ImagenPerfil;
+                img.ImageUrl = "~/Img/Perfil" + user.ImagenPerfil;
 
             }
             catch (Exception ex)
