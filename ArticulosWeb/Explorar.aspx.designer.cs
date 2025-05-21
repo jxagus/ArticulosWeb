@@ -11,7 +11,7 @@ namespace ArticulosWeb
 {
 
 
-    public partial class Contact
+    public partial class Explorar
     {
     }
 }

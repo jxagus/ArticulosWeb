@@ -9,7 +9,7 @@ using NegocioArticulo;
 
 namespace ArticulosWeb
 {
-    public partial class About : Page
+    public partial class Preguntas : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

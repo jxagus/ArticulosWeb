@@ -14,6 +14,11 @@ namespace ArticulosWeb
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            //admin
+            if (!Seguridad.sesionActiva(Session["usuario"]))
+                Session.Add("error", "No tiene permisos para acceder a esta sección");
+            Response.Redirect("Explorar.aspx", false);
+
             FiltroAvanzado = chkAvanzado.Checked;
             if (!IsPostBack)
             {

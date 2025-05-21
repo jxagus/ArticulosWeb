@@ -17,9 +17,16 @@ namespace ArticulosWeb
             {
                 Dominio.Usuario usuario = new Dominio.Usuario();
                 UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
-                usuario.User = txtUser.Text;
+                EmailService emailService = new EmailService();
+
+                usuario.Email = txtEmail.Text;
                 usuario.Pass = txtPass.Text;
-                int id = usuarioNegocio.insertarNuevo(usuario);
+                usuario.Id = usuarioNegocio.insertarNuevo(usuario);
+                Session.Add("usuario", usuario); //guardo el usuario en la sesion
+
+                emailService.armarCorreo(usuario.Email,"Bienvenidos a ArticulosWeb","te damos la bienvenida"); //mensajito por registrarte
+                emailService.enviarEmail();
+                Response.Redirect("Default", false); //redirecciono a login
             }
             catch (Exception ex)
             {

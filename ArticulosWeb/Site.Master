@@ -56,16 +56,27 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Preguntas">Preguntas</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
                             <!--Cosas para agregar despues 
-                            <li class="nav-item"><a class="nav-link" runat="server" href="Login.aspx">Login</a></li>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a></li>
                                 <li class="nav-item"><a class="nav-link" runat="server" href="~/Mis Favoritos">Mis Favoritos</a></li>
+                           
                             -->                            
                         </ul>
                     </div>
+
                     <div class="d-flex">
-                        <a href="Login.aspx" class="btn btn-success me-2">Login</a>
-                         <a href="Registro.aspx" class="btn btn-outline-primary m-auto">Registrarse</a>
-                    </div>
+                    <% if (!NegocioArticulo.Seguridad.sesionActiva(Session["usuario"])){ %>
+                            <a href="Login.aspx" class="btn btn-success me-2">Login</a>
+                            <a href="Registro.aspx" class="btn btn-outline-primary m-auto">Registrarse</a> <!-- desaparece-->
+                    <%
+                       }
+                       else {
+                    %>
+                            <asp:Button Text="Salir" ID="btnSalir" cssclass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" />
+                            <asp:Label id="lblUser" Text="user" CssClass="text-light m-auto me-2" runat="server" />
+                            <a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a>
+                    <%} %>
+                    <asp:Image ID="imgAvatar" style="height:40px; width:40px; border-radius:50%;" 
+                        runat="server" />
+                </div>
                 </div>
             </nav>
 
@@ -73,7 +84,6 @@
             <asp:ContentPlaceHolder ID="FullWidthContent" runat="server" />
             <div class="container body-content">
                 <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-                <hr />
             </div>
         </div>
 

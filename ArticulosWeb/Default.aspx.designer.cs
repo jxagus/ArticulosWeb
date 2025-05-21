@@ -11,7 +11,7 @@ namespace ArticulosWeb
 {
 
 
-    public partial class _Default
+    public partial class Default
     {
     }
 }

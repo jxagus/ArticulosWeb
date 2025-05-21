@@ -9,7 +9,7 @@ using NegocioArticulo;
 
 namespace ArticulosWeb
 {
-    public partial class _Default : Page
+    public partial class Default : Page
     {
         public List<Articulo> ListaArticulos { get; set; } // Todos
         public List<Articulo> ListaCelulares { get; set; } // Solo celulares

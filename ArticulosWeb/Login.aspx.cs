@@ -21,8 +21,8 @@ namespace ArticulosWeb
                 usuario = new Dominio.Usuario(txtUser.Text, txtPassword.Text, false);
                 if (negocio.Loguear(usuario))
                 {
-                    Session.Add("usuario", usuario);
-                    Response.Redirect("MenuLogin1Ejemplo.aspx", false);
+                    Session.Add("usuario", usuario); //guardamos en session
+                    Response.Redirect("Default.aspx", false);
                 }
                 else
                 {
@@ -36,5 +36,6 @@ namespace ArticulosWeb
                 Response.Redirect("Error.aspx");
             }
         }
+
     }
 }
