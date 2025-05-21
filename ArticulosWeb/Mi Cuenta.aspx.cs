@@ -69,6 +69,14 @@ namespace ArticulosWeb
                 Image img = (Image)Master.FindControl("imgAvatar");
                 img.ImageUrl = "~/Img/Perfil" + user.ImagenPerfil;
 
+                //mensaje
+                lblMensaje.Text = "Todo listo, datos guardados correctamente 👍";
+                lblMensaje.Visible = true;
+
+                //redirect
+                string script = "setTimeout(function(){ window.location.href = 'Explorar.aspx'; }, 2000);";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "redirect", script, true);
+
             }
             catch (Exception ex)
             {

@@ -13,10 +13,21 @@ namespace ArticulosWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            imgAvatar.ImageUrl = "~/Img/usuarioDefault.jpg";
             if (!(Page is Login || Page is Registro || Page is Explorar || Page is Preguntas || Page is Error))
             {
                 if (!Seguridad.sesionActiva(Session["usuario"]))
+                {
                     Response.Redirect("Login.aspx", false);
+                }
+                else
+                {
+                    Usuario user = (Usuario)Session["usuario"];
+                    lblUser.Text = user.Email;
+                    if (!string.IsNullOrEmpty(user.ImagenPerfil))
+                        imgAvatar.ImageUrl = "~/Img/Perfil/" + user.ImagenPerfil;
+                }
+
             }
             if (Seguridad.sesionActiva(Session["usuario"]))
                 imgAvatar.ImageUrl = "~/Img/Perfil" + ((Usuario)Session["usuario"]).ImagenPerfil;

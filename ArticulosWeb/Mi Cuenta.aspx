@@ -48,7 +48,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Fecha de Nacimiento</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtFechaNacimiento" TextMode="Date" />
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtFechaNacimiento" TextMode="Date" /> <!--date formato-->
             </div>
 
         </div>
@@ -66,7 +66,10 @@
     <div class="row">
         <div class="col-md-4">
             <asp:Button Text="Guardar" CssClass="btn btn-primary" OnClientClick="return validar()" OnClick="btnGuardar_Click" ID="btnGuardar" runat="server" />
-            <a href="/">Regresar</a>
+            <a href="Explorar.aspx">Regresar</a>
+        </div>
+        <div class="col-md-4">
+            <asp:Label ID="lblMensaje" runat="server" ForeColor="Green" Visible="false"></asp:Label> <!-- para el script -->
         </div>
     </div>
 </asp:Content>
