@@ -15,18 +15,48 @@ namespace ArticulosWeb
         {
             try
             {
-                Dominio.Usuario usuario = new Dominio.Usuario();
                 UsuarioNegocio usuarioNegocio = new UsuarioNegocio();
+                string email = txtEmail.Text.Trim();
+                string pass = txtPass.Text;
+                string confirmarPass = txtConfirmarPass.Text;
+
+                // Validar campos obligatorios
+                if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(pass) || string.IsNullOrWhiteSpace(confirmarPass))
+                {
+                    lblError.Text = "Todos los campos son obligatorios.";
+                    lblError.Visible = true;
+                    return;
+                }
+
+                // Validar si el email ya existe
+                if (usuarioNegocio.emailExiste(email))
+                {
+                    lblError.Text = "Ese correo ya está registrado. Probá con otro.";
+                    lblError.Visible = true;
+                    return;
+                }
+
+                // Validar si las contraseñas coinciden
+                if (pass != confirmarPass)
+                {
+                    lblError.Text = "Las contraseñas no coinciden.";
+                    lblError.Visible = true;
+                    return;
+                }
+
+                // Si todo está bien, registrar usuario
+                Dominio.Usuario usuario = new Dominio.Usuario();
                 EmailService emailService = new EmailService();
 
-                usuario.Email = txtEmail.Text;
-                usuario.Pass = txtPass.Text;
+                usuario.Email = email;
+                usuario.Pass = pass;
                 usuario.Id = usuarioNegocio.insertarNuevo(usuario);
-                Session.Add("usuario", usuario); //guardo el usuario en la sesion
+                Session.Add("usuario", usuario);
 
-                emailService.armarCorreo(usuario.Email,"Bienvenidos a ArticulosWeb","te damos la bienvenida rey"); //mensajito por registrarte
+                emailService.armarCorreo(usuario.Email, "Bienvenidos a ArticulosWeb", "Te damos la bienvenida rey 👑");
                 emailService.enviarEmail();
-                Response.Redirect("Default", false); //redirecciono a login
+
+                Response.Redirect("Default.aspx", false);
             }
             catch (Exception ex)
             {
