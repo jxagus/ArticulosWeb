@@ -21,7 +21,7 @@
     <!-- filtro avanzado -->
     <%if (chkAvanzado.Checked)
         { %>
-        <div class="row">
+    <div class="row">
         <div class="col-3">
             <div class="mb-3">
                 <asp:Label Text="Campo" ID="lblCampo" runat="server" />
@@ -53,19 +53,56 @@
         </div>
     </div>
     <%} %>
-            <!-- dgv dentro del UpdatePanel -->
+    <style>
+        .pagination a, .pagination span {
+            display: inline-block;
+            padding: .5rem .75rem;
+            margin-left: -1px;
+            line-height: 1.25;
+            color: #007bff;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            text-decoration: none;
+        }
+
+        .pagination span {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .pagination {
+            justify-content: flex-start !important;
+            margin-left: 0 !important;
+            display: flex;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #dgvLista .pagination {
+            justify-content: center !important;
+        }
+    </style>
+
+    <!-- dgv dentro del UpdatePanel -->
     <asp:GridView ID="dgvLista" runat="server" DataKeyNames="Id"
-        CssClass="table" AutoGenerateColumns="false"
+        CssClass="table"
+        AutoGenerateColumns="false"
+        AllowPaging="True"
+        PageSize="5"
+        PagerStyle-CssClass="pagination"
+        PagerStyle-HorizontalAlign="Center"
         OnSelectedIndexChanged="DgvLista_SelectedIndexChanged"
-        OnPageIndexChanging="DgvLista_PageIndexChanging"
-        AllowPaging="True" PageSize="5">
+        OnPageIndexChanging="DgvLista_PageIndexChanging">
         <Columns>
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
-            <asp:BoundField HeaderText="Categoria" DataField="Categoria" />                   
+            <asp:BoundField HeaderText="Categoria" DataField="Categoria" />
             <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
             <asp:BoundField HeaderText="Precio" DataField="Precio" />
             <asp:CommandField HeaderText="Accion" ShowSelectButton="true" SelectText="✍️" />
         </Columns>
     </asp:GridView>
     <a href="FormularioArticulo.aspx" class="btn btn-primary">Agregar</a>
+
 </asp:Content>
+
