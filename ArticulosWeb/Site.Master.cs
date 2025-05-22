@@ -14,7 +14,7 @@ namespace ArticulosWeb
         protected void Page_Load(object sender, EventArgs e)
         {
             imgAvatar.ImageUrl = "~/Img/usuarioDefault.jpg";
-            if (!(Page is Login || Page is Registro || Page is Explorar || Page is Preguntas || Page is Error || Page is Lista))
+            if (!(Page is Login || Page is Registro || Page is Explorar || Page is Preguntas || Page is Error || Page is Lista || Page is Default))
             {
                 if (!Seguridad.sesionActiva(Session["usuario"]))
                 {

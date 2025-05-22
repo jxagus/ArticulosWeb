@@ -51,7 +51,7 @@
         <div class="mb-3">
             <label class="form-label">Correo electrónico</label>
             <asp:TextBox runat="server" ID="txtEmail" placeholder="Email" CssClass="form-control" />
-            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+            <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie.</div>
         </div>
         <asp:Label ID="Label1" runat="server" CssClass="text-danger" Visible="false" />
 

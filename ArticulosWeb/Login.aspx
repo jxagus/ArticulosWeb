@@ -1,20 +1,28 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ArticulosWeb.Login" %>
+﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ArticulosWeb.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="mb-6">
-        <div class="mb-3">
-            <label class="form-label">User</label>
-            <asp:TextBox runat="server" ID="txtUser" placeholder="user name" CssClass="form-control" />
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+        <div class="card shadow p-4" style="width: 100%; max-width: 380px; border-radius: 12px;">
+            <h2 class="text-center mb-4">Iniciar Sesión</h2>
+
+            <div class="mb-3">
+                <label for="<%= txtUser.ClientID %>" class="form-label">Usuario</label>
+                <asp:TextBox runat="server" ID="txtUser" placeholder="Ingrese su usuario" CssClass="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="<%= txtPassword.ClientID %>" class="form-label">Contraseña</label>
+                <asp:TextBox runat="server" ID="txtPassword" placeholder="Ingrese su contraseña" CssClass="form-control" TextMode="Password" />
+            </div>
+
+            <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" CssClass="btn btn-primary w-100" OnClick="btnIngresar_Click" />
+
+            <div class="mt-3 text-center">
+                <a href="Default.aspx" class="text-decoration-none">Cancelar</a> |
+                <a href="Registro.aspx" class="text-decoration-none">Registrarse</a>
+            </div>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Password</label>
-            <asp:TextBox runat="server" placeholder="*****" ID="txtPassword" CssClass="form-control" TextMode="Password" />
-        </div>
-        <div class="mb-3 form-check">
-        </div>
-        <asp:Button Text="Ingresar" runat="server" ID="btnIngresar" OnClick="btnIngresar_Click" CssClass="btn btn-primary" />
-        <a href="Default.aspx">Cancelar</a>
     </div>
 
 </asp:Content>
