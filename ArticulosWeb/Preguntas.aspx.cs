@@ -30,7 +30,7 @@ namespace ArticulosWeb
                 string script = "<script>setTimeout(function() { document.getElementById('" + lblEnviar.ClientID + "').style.display = 'none'; }, 5000);</script>";
                 ClientScript.RegisterStartupScript(this.GetType(), "HideLabel", script);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // Mostrar el error
                 //lblEnviar.Text = "Error al enviar el email: " + ex.Message;

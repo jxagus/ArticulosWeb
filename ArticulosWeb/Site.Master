@@ -55,16 +55,8 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Explorar">Explorar</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Preguntas">Preguntas</a></li>
-                            <% if (NegocioArticulo.Seguridad.sesionActiva(Session["usuario"]) &&
-                                    ((Dominio.Usuario)Session["usuario"]).TipoUsuario == Dominio.TipoUsuario.ADMIN)
-                                { %>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
-                            <% } %>
 
-                            <!--Cosas para agregar despues 
-                                <li class="nav-item"><a class="nav-link" runat="server" href="~/Mis Favoritos">Mis Favoritos</a></li>
-                           
-                            -->
                         </ul>
                     </div>
 
@@ -74,8 +66,7 @@
                         <a href="Login.aspx" class="btn btn-success me-2">Ingresar</a>
                         <!-- <a href="Registro.aspx" class="btn btn-outline-primary m-auto">Registrarse</a> -->
                         <!-- desaparece-->
-                        <%
-                            }
+                        <% }
                             else
                             {
                         %>
@@ -83,8 +74,7 @@
                         <asp:Label ID="lblUser" Text="user" CssClass="text-light m-auto me-2" runat="server" />
                         <a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a>
                         <%} %>
-                        <asp:Image ID="imgAvatar" Style="height: 40px; width: 40px; border-radius: 50%;"
-                            runat="server" />
+                        <asp:Image ID="imgAvatar" Style="height: 40px; width: 40px; border-radius: 50%;" runat="server" />
                     </div>
                 </div>
             </nav>
