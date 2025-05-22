@@ -5,4 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
     <h1>hubo un problema</h1>
+    <asp:Label ID="lblError" runat="server" Text="Label"></asp:Label>
+
+    <!-- agregar boton de volver -->
+
 </asp:Content>

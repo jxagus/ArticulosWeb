@@ -18,7 +18,7 @@ namespace ArticulosWeb
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             EmailService emailService = new EmailService();
-            emailService.armarCorreo(txtEmail.Text, txtAsunto.Text, txtMensaje.Text);
+            emailService.armarCorreo(txtEmail.Text, txtAsunto.Text, "<h1>Gracias por comunicarte con nosotros</h1> <br>En breve nuestro asistente virtual respondera tus dudas por este medio");//lo que le llega\r\n");
 
             try
             {

@@ -24,7 +24,7 @@ namespace ArticulosWeb
                 usuario.Id = usuarioNegocio.insertarNuevo(usuario);
                 Session.Add("usuario", usuario); //guardo el usuario en la sesion
 
-                emailService.armarCorreo(usuario.Email,"Bienvenidos a ArticulosWeb","te damos la bienvenida"); //mensajito por registrarte
+                emailService.armarCorreo(usuario.Email,"Bienvenidos a ArticulosWeb","te damos la bienvenida rey"); //mensajito por registrarte
                 emailService.enviarEmail();
                 Response.Redirect("Default", false); //redirecciono a login
             }

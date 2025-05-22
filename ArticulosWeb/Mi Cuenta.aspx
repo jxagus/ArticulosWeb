@@ -35,6 +35,7 @@
             <div class="mb-3">
                 <label class="form-label">Nombre</label>
                 <asp:TextBox runat="server" CssClass="form-control" ClientIDMode="Static" ID="txtNombre" />
+                <asp:RequiredFieldValidator ErrorMessage="El nombre es requerido" ControlToValidate="txtNombre" runat="server" />
                 <%--<asp:RequiredFieldValidator CssClass="validacion" ErrorMessage="El nombre es requerido" ControlToValidate="txtNombre" runat="server" />--%>
             </div>
             <div class="mb-3">

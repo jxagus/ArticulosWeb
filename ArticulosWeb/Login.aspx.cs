@@ -13,12 +13,20 @@ namespace ArticulosWeb
 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
-            Dominio.Usuario usuario;
+            Dominio.Usuario usuario = new Dominio.Usuario();
             UsuarioNegocio negocio = new UsuarioNegocio();
 
             try
             {
-                usuario = new Dominio.Usuario(txtUser.Text, txtPassword.Text, false);
+                if(Validacion.ValidaTextoVacio(txtUser) ||Validacion.ValidaTextoVacio(txtPassword)) //completa ambos campos capo
+                {
+                    Session.Add("error", "Completa los campos porfavor");
+                    Response.Redirect("Error.aspx", false);
+                    return;
+                }
+                
+                usuario.Email = txtUser.Text;
+                usuario.Pass = txtPassword.Text;
                 if (negocio.Loguear(usuario))
                 {
                     Session.Add("usuario", usuario); //guardamos en session
@@ -35,6 +43,15 @@ namespace ArticulosWeb
                 Session.Add("error", ex.ToString());
                 Response.Redirect("Error.aspx");
             }
+        }
+        private void Page_Error(object sender, EventArgs e)
+        {
+            Exception exc = Server.GetLastError();
+
+
+            Session.Add("error", exc.ToString());
+            //Response.Redirect("Error.aspx");
+            Server.Transfer("Error.aspx");
         }
 
     }

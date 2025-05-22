@@ -16,8 +16,12 @@ namespace ArticulosWeb
         {
             //admin
             if (!Seguridad.sesionActiva(Session["usuario"]))
+            {
                 Session.Add("error", "No tiene permisos para acceder a esta sección");
-            Response.Redirect("Explorar.aspx", false);
+                Response.Redirect("Explorar.aspx", false);
+                return; // importante para cortar la ejecución
+            }
+
 
             FiltroAvanzado = chkAvanzado.Checked;
             if (!IsPostBack)
