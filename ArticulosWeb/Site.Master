@@ -54,27 +54,34 @@
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Explorar">Explorar</a></li>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Preguntas">Preguntas</a></li>
+                            <!-- Seciones agregadas -->
+                            <% if (NegocioArticulo.Seguridad.sesionActiva(Session["usuario"]))
+                                { %>
+                            <% if (NegocioArticulo.Seguridad.esAdmin(Session["usuario"]))
+                                { %>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
-
+                            <% } %>
+                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Carrito">Carrito</a></li>
+                            <% } %>
                         </ul>
                     </div>
 
                     <div class="d-flex">
                         <% if (!NegocioArticulo.Seguridad.sesionActiva(Session["usuario"]))
-                            { %>                                                                                  
-                            <a href="Login.aspx" class="btn btn-success me-2">Ingresar</a>
+                            { %>
+                        <a href="Login.aspx" class="btn btn-success me-2">Ingresar</a>
                         <!-- desaparece-->
                         <% }
                             else
                             {
                         %>
                         <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" />
-                            <!-- Nombre del usuario -->
-                            <a href="MiCuenta.aspx" class="text-light me-2 text-decoration-none d-flex align-items-center">
-                            <asp:Label ID="lblUser" CssClass="fw-normal" runat="server" />
-                            </a>
+                        <!-- Nombre del usuario -->
+                        <a href="Mi Cuenta.aspx" class="text-light me-2 text-decoration-none d-flex align-items-center">
+                            <asp:Label ID="lblUser" CssClass="fw-normal" runat="server" /></a>
+
                         <%} %>
-                            <!-- Imagen de perfil -->
+                        <!-- Imagen de perfil -->
                         <asp:Image ID="imgAvatar" Style="height: 40px; width: 40px; border-radius: 50%;" runat="server" />
                     </div>
                 </div>

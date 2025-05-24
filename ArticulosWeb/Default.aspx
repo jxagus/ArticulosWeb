@@ -33,7 +33,10 @@
                 <div class="card-body">
                     <h5 class="card-title"><%: item.Nombre %></h5>
                     <p class="card-text"><%: item.Descripcion %></p>
-                    <a href="#" class="btn btn-primary">Ver detalles</a>
+                    <p class="card-text"><%: item.Precio %></p>
+                    <a href="DetalleArticulo.aspx" class="btn btn-primary">Detalle</a>
+                    <a href="Carrito.aspx" class="btn btn-primary">Comprar</a>
+
                 </div>
             </div>
         </div>

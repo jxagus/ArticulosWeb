@@ -99,7 +99,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Carrito.aspx" />
     <Content Include="Content\custom-style.css" />
+    <Content Include="DetalleArticulo.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="FormularioArticulo.aspx" />
     <Content Include="Gestion.aspx" />
@@ -202,6 +204,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Carrito.aspx.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Carrito.aspx.designer.cs">
+      <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleArticulo.aspx.cs">
+      <DependentUpon>DetalleArticulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleArticulo.aspx.designer.cs">
+      <DependentUpon>DetalleArticulo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

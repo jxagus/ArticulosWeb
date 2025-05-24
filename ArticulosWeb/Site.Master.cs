@@ -31,7 +31,14 @@ namespace ArticulosWeb
                 if (Seguridad.sesionActiva(Session["usuario"]))
                 {
                     Usuario user = (Usuario)Session["usuario"];
-                    lblUser.Text = user.Nombre;
+                    //lblUser.Text = user.Nombre;
+                    if (user == null || string.IsNullOrEmpty(user.Nombre)) { 
+                        lblUser.Text = "Usuario";
+                    }
+                    else
+                    {
+                        lblUser.Text = user.Nombre;
+                    }
 
                     if (!string.IsNullOrEmpty(user.ImagenPerfil))
                         imgAvatar.ImageUrl = "~/Img/Perfil" + user.ImagenPerfil;
