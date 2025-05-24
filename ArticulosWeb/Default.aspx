@@ -13,7 +13,7 @@
     <!-- test explorar -->
 
     <!-- Ofertas unicas en Iphones -->
-    <h1>Celulares</h1>
+    <h2>Nuestros celulares</h2>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <% foreach (Dominio.Articulo item in ListaCelulares)
             { %>
@@ -32,8 +32,7 @@
 
                 <div class="card-body">
                     <h5 class="card-title"><%: item.Nombre %></h5>
-                    <p class="card-text"><%: item.Descripcion %></p>
-                    <p class="card-text"><%: item.Precio %></p>
+                    <p class="card-text"><%:"$"+ item.Precio %></p>
                     <a href='DetalleArticulo.aspx?id=<%: item.Id %>' class="btn btn-primary">Ver detalles</a>
                     <a href="Carrito.aspx" class="btn btn-primary">Comprar</a>
 
@@ -44,13 +43,13 @@
     </div>
 
     <!-- Nuestros productos destacados -->
-    <h1>Nuestros productos destacados</h1>
+    <h2>Otros de nuestros productos</h2>
     <div class="col-6">
         <div class="mb-3">
         </div>
     </div>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        <% foreach (Dominio.Articulo item in ListaArticulos)
+        <% foreach (Dominio.Articulo item in ListaSinCelulares)
             { %>
         <div class="col">
             <div class="card">
@@ -68,7 +67,7 @@
 
                 <div class="card-body">
                     <h5 class="card-title"><%: item.Nombre %></h5>
-                    <p class="card-text"><%: item.Descripcion %></p>
+                    <p class="card-text"><%:"$"+ item.Precio %></p>
                     <a href='DetalleArticulo.aspx?id=<%: item.Id %>' class="btn btn-primary">Ver detalles</a>
                     <a href="Carrito.aspx" class="btn btn-primary">Comprar</a>
                 </div>

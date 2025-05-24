@@ -13,6 +13,7 @@ namespace ArticulosWeb
     {
         public List<Articulo> ListaArticulos { get; set; } // Todos
         public List<Articulo> ListaCelulares { get; set; } // Solo celulares
+        public List<Articulo> ListaSinCelulares { get; set; } // Solo no celulares
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,6 +22,8 @@ namespace ArticulosWeb
                 Negocio negocio = new Negocio();
                 ListaArticulos = negocio.listarConSP();
                 ListaCelulares = negocio.ListarCelulares(); 
+                ListaSinCelulares = negocio.ListarSinCelulares(); 
+
             }
         }
     }
