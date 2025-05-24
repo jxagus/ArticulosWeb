@@ -16,7 +16,6 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <!--ojo con este gato -->
     <link href="Img/Caja.png" rel="shortcut icon" />
 </head>
 
@@ -62,18 +61,20 @@
 
                     <div class="d-flex">
                         <% if (!NegocioArticulo.Seguridad.sesionActiva(Session["usuario"]))
-                            { %>
-                        <a href="Login.aspx" class="btn btn-success me-2">Ingresar</a>
-                        <!-- <a href="Registro.aspx" class="btn btn-outline-primary m-auto">Registrarse</a> -->
+                            { %>                                                                                  
+                            <a href="Login.aspx" class="btn btn-success me-2">Ingresar</a>
                         <!-- desaparece-->
                         <% }
                             else
                             {
                         %>
                         <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" />
-                        <asp:Label ID="lblUser" Text="user" CssClass="text-light m-auto me-2" runat="server" />
-                        <a class="nav-link" runat="server" href="~/Mi cuenta">Mi Cuenta</a>
+                            <!-- Nombre del usuario -->
+                            <a href="MiCuenta.aspx" class="text-light me-2 text-decoration-none d-flex align-items-center">
+                            <asp:Label ID="lblUser" CssClass="fw-normal" runat="server" />
+                            </a>
                         <%} %>
+                            <!-- Imagen de perfil -->
                         <asp:Image ID="imgAvatar" Style="height: 40px; width: 40px; border-radius: 50%;" runat="server" />
                     </div>
                 </div>
