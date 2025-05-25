@@ -19,40 +19,44 @@
         </div>
     </div>
     <!-- filtro avanzado -->
-    <%if (chkAvanzado.Checked)
-        { %>
-    <div class="row">
-        <div class="col-3">
-            <div class="mb-3">
-                <asp:Label Text="Campo" ID="lblCampo" runat="server" />
-                <asp:DropDownList runat="server" AutoPostBack="true" CssClass="form-control" ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
-                    <asp:ListItem Text="Precio" />
-                    <asp:ListItem Text="Nombre" />
-                    <asp:ListItem Text="Descripcion" />
-                </asp:DropDownList>
+  <!-- filtro avanzado -->
+<% if (chkAvanzado.Checked) { %>
+    <asp:Panel ID="pnlFiltroAvanzado" runat="server" DefaultButton="btnBuscar">
+        <div class="row">
+            <div class="col-3">
+                <div class="mb-3">
+                    <asp:Label Text="Campo" ID="lblCampo" runat="server" />
+                    <asp:DropDownList runat="server" AutoPostBack="true" CssClass="form-control" ID="ddlCampo" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
+                        <asp:ListItem Text="Precio" />
+                        <asp:ListItem Text="Nombre" />
+                        <asp:ListItem Text="Descripcion" />
+                    </asp:DropDownList>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <asp:Label Text="Criterio" runat="server" />
+                    <asp:DropDownList runat="server" ID="ddlCriterio" CssClass="form-control"></asp:DropDownList>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3">
+                    <asp:Label Text="Filtro" runat="server" />
+                    <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control" />
+                </div>
             </div>
         </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <asp:Label Text="Criterio" runat="server" />
-                <asp:DropDownList runat="server" ID="ddlCriterio" CssClass="form-control"></asp:DropDownList>
+        <div class="row">
+            <div class="col-3">
+                <div class="mb-3">
+                    <asp:Button Text="Buscar" runat="server" CssClass="btn btn-primary" ID="btnBuscar" OnClick="btnBuscar_Click" />
+                </div>
             </div>
         </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <asp:Label Text="Filtro" runat="server" />
-                <asp:TextBox runat="server" ID="txtFiltroAvanzado" CssClass="form-control" />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3">
-            <div class="mb-3">
-                <asp:Button Text="Buscar" runat="server" CssClass="btn btn-primary" ID="btnBuscar" OnClick="btnBuscar_Click" />
-            </div>
-        </div>
-    </div>
-    <%} %>
+    </asp:Panel>
+<% } %>
+
+
     <style>
         .pagination a, .pagination span {
             display: inline-block;

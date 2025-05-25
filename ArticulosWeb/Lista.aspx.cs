@@ -14,16 +14,13 @@ namespace ArticulosWeb
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            //admin
             if (!Seguridad.sesionActiva(Session["usuario"]))
             {
                 Session.Add("error", "No tiene permisos para acceder a esta sección");
                 Response.Redirect("Explorar.aspx", false);
-                return; // importante para cortar la ejecución
+                return;
             }
 
-
-            FiltroAvanzado = chkAvanzado.Checked;
             if (!IsPostBack)
             {
                 Negocio articulo = new Negocio();
@@ -32,7 +29,10 @@ namespace ArticulosWeb
                 dgvLista.DataSource = lista;
                 dgvLista.DataBind();
             }
+
+            pnlFiltroAvanzado.Visible = chkAvanzado.Checked;
         }
+
         protected void DgvLista_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             dgvLista.PageIndex = e.NewPageIndex;
@@ -98,18 +98,20 @@ namespace ArticulosWeb
         {
             try
             {
-                dgvLista.DataSource = Negocio.filtrar(
-                    ddlCampo.SelectedItem.ToString(),
-                    ddlCriterio.SelectedItem.ToString(),
-                    txtFiltroAvanzado.Text);
+                string campo = ddlCampo.SelectedItem?.Text;
+                string criterio = ddlCriterio.SelectedItem?.Text;
+                string filtro = txtFiltroAvanzado.Text;
+
+                dgvLista.DataSource = Negocio.filtrar(campo, criterio, filtro);
                 dgvLista.DataBind();
             }
             catch (Exception ex)
             {
-                Session.Add("error", ex);
-                throw;
+                Session["error"] = ex.ToString();
+                Response.Redirect("Error.aspx");
             }
         }
+
 
     }
 }
