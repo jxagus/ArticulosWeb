@@ -14,10 +14,17 @@ namespace ArticulosWeb
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!Seguridad.sesionActiva(Session["usuario"]))
+            Usuario usuario = (Usuario)Session["usuario"];
+            if (!Seguridad.sesionActiva(Session["usuario"]) )
             {
                 Session.Add("error", "No tiene permisos para acceder a esta sección");
                 Response.Redirect("Explorar.aspx", false);
+                return;
+            }
+            if (!Seguridad.esAdmin(Session["usuario"]))
+            {
+                Session.Add("error", "acceso denegado");
+                Response.Redirect("Error.aspx");
                 return;
             }
 

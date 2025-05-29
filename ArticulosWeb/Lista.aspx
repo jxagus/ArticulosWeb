@@ -18,7 +18,6 @@
                 OnCheckedChanged="chkAvanzado_CheckedChanged" />
         </div>
     </div>
-    <!-- filtro avanzado -->
   <!-- filtro avanzado -->
 <% if (chkAvanzado.Checked) { %>
     <asp:Panel ID="pnlFiltroAvanzado" runat="server" DefaultButton="btnBuscar">
