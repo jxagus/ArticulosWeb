@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="ArticulosWeb.Registro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <!-- estilos bonitos-->
     <style>
         .registro-container {
             max-width: 400px;
@@ -35,7 +36,7 @@
             text-decoration: none;
         }
 
-            a.cancel-link:hover {
+        a.cancel-link:hover {
                 text-decoration: underline;
             }
     </style>

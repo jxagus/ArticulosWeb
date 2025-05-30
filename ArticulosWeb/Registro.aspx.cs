@@ -44,7 +44,7 @@ namespace ArticulosWeb
                     return;
                 }
 
-                // Si todo está bien, registrar usuario
+                // Si todo esta bien, registrar usuario
                 Dominio.Usuario usuario = new Dominio.Usuario();
                 EmailService emailService = new EmailService();
 

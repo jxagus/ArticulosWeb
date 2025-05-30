@@ -17,7 +17,7 @@ namespace ArticulosWeb
             {
                 imgAvatar.ImageUrl = "~/Img/usuarioDefault.jpg";
 
-                // Páginas que no requieren sesión
+                // Pags que no requieren sesion
                 if (!(Page is Login || Page is Registro || Page is Explorar || Page is Preguntas || Page is Error || Page is Default || Page is Lista ||Page is DetalleArticulo))
                 {
                     if (!Seguridad.sesionActiva(Session["usuario"]))
@@ -27,7 +27,7 @@ namespace ArticulosWeb
                     }
                 }
 
-                // Si hay sesión activa, mostrar usuario e imagen
+                // Si hay sesion activa, mostrar usuario e imagen
                 if (Seguridad.sesionActiva(Session["usuario"]))
                 {
                     Usuario user = (Usuario)Session["usuario"];
