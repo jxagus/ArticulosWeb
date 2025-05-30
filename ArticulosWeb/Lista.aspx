@@ -19,8 +19,7 @@
         </div>
     </div>
   <!-- filtro avanzado -->
-<% if (chkAvanzado.Checked) { %>
-    <asp:Panel ID="pnlFiltroAvanzado" runat="server" DefaultButton="btnBuscar">
+    <asp:Panel ID="pnlFiltroAvanzado" runat="server" DefaultButton="btnBuscar" Visible="false">
         <div class="row">
             <div class="col-3">
                 <div class="mb-3">
@@ -53,7 +52,6 @@
             </div>
         </div>
     </asp:Panel>
-<% } %>
 
 
     <style>

@@ -17,9 +17,9 @@
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            Para realizar una compra debe dirigirse a la sección de "Tienda", seleccionar el producto deseado
+                            <h6>Temporalmente esta deshabilitada esta opcion</h6>Para realizar una compra debe dirigirse a la sección de "Explorar" o desde el mismo "Inicio", seleccionar el producto deseado
                         y presionar en "Agregar al carrito".
-                        Luego, desde el ícono del carrito podrá finalizar la compra.
+                        Luego, desde el ícono del carrito podrá finalizar la compra. 
                         </div>
                     </div>
                 </div>

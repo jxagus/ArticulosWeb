@@ -1,23 +1,19 @@
-﻿﻿ /* Fondo general del body */
-body {
+﻿body {
     background-color: #f4e7d4 !important;
     color: #2c1d12 !important;
 }
 
-
-/* Navbar marron oscuro */
 .navbar {
     background-color: #5a3e2b !important;
 }
 
-    /* Links dentro del navbar */
-    .navbar .nav-link {
-        color: #f4e7d4 !important;
-    }
+.navbar .nav-link {
+    color: #f4e7d4 !important;
+}
 
-        .navbar .nav-link:hover {
-            color: #ffc9a0 !important;
-        }
+.navbar .nav-link:hover {
+    color: #ffc9a0 !important;
+}
 
 .hero-section {
     padding-top: 80px; /* espacio para que no lo tape el navbar */
@@ -29,10 +25,10 @@ body {
     border-color: #b3472c;
 }
 
-    .btn-danger:hover {
-        background-color: #a23d24;
-        border-color: #a23d24;
-    }
+.btn-danger:hover {
+    background-color: #a23d24;
+    border-color: #a23d24;
+}
 
 /* Footer */
 footer {
@@ -54,10 +50,9 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-    /* Asegura que el contenido tome el espacio disponible */
-    body > form > .d-flex {
-        min-height: 100vh;
-    }
+body > form > .d-flex {
+    min-height: 100vh;
+}
 
 /* Opcional, si querés darle un fondo marrón clarito */
 body {
@@ -109,14 +104,14 @@ body.home {
     padding: 0;
 }
 
-    body.home .body-content {
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-    }
+body.home .body-content {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
 
-    body.home footer {
-        width: 100%;
-        margin: 0;
-        padding: 10px 0;
-    }
+body.home footer {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+}

@@ -30,11 +30,20 @@ namespace ArticulosWeb
 
             if (!IsPostBack)
             {
+                pnlFiltroAvanzado.Visible = chkAvanzado.Checked;
+
                 Negocio articulo = new Negocio();
                 List<Articulo> lista = articulo.listarConSP();
                 Session["listaArticulos"] = lista;
                 dgvLista.DataSource = lista;
                 dgvLista.DataBind();
+
+                // Si el filtro avanzado esta activo, inicializamos el criterio
+                if (chkAvanzado.Checked)
+                {
+                    ddlCampo.SelectedIndex = 0; // Precio
+                    ddlCampo_SelectedIndexChanged(null, null); // Poblamos criterios
+                }
             }
 
             pnlFiltroAvanzado.Visible = chkAvanzado.Checked;
@@ -82,9 +91,15 @@ namespace ArticulosWeb
         }
         protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
         {
-            FiltroAvanzado = chkAvanzado.Checked;
-            txtFiltro.Enabled = !FiltroAvanzado; //cambio de estado de la prop y activa el filtro
+            pnlFiltroAvanzado.Visible = chkAvanzado.Checked;
+
+            if (chkAvanzado.Checked)
+            {
+                ddlCampo.SelectedIndex = 0;
+                ddlCampo_SelectedIndexChanged(null, null);
+            }
         }
+
         protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             ddlCriterio.Items.Clear();

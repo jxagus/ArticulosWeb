@@ -15,8 +15,11 @@ namespace ArticulosWeb
         public bool FiltroAvanzado { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
             Negocio Articulos = new Negocio();
             ListaArticulos = Articulos.listarConSP();
+            }
             
         }
     }

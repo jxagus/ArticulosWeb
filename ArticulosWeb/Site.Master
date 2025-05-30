@@ -6,7 +6,6 @@
 <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <!--aca va el custom.stile.css -->
     <link href="Content/custom-style.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,7 +60,7 @@
                                 { %>
                             <li class="nav-item"><a class="nav-link" runat="server" href="~/Lista">Lista</a></li>
                             <% } %>
-                            <li class="nav-item"><a class="nav-link" runat="server" href="~/Carrito">Carrito</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" runat="server" href="~/Carrito">Carrito</a></li> -->
                             <% } %>
                         </ul>
                     </div>

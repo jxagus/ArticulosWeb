@@ -4,4 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FullWidthContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
+    <h2>Hola futuro comprador</h2>
+    <h3>Estamos trabajando en esta seccion, pronto sera habilitada 🗂️</h3>
 </asp:Content>

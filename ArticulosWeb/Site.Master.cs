@@ -18,7 +18,7 @@ namespace ArticulosWeb
                 imgAvatar.ImageUrl = "~/Img/usuarioDefault.jpg";
 
                 // Páginas que no requieren sesión
-                if (!(Page is Login || Page is Registro || Page is Explorar || Page is Preguntas || Page is Error || Page is Default || Page is Lista))
+                if (!(Page is Login || Page is Registro || Page is Explorar || Page is Preguntas || Page is Error || Page is Default || Page is Lista ||Page is DetalleArticulo))
                 {
                     if (!Seguridad.sesionActiva(Session["usuario"]))
                     {

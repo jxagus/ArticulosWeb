@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FullWidthContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-    <h2>Bienvenido</h2>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <h2>Bienvenido Admin</h2>
+    <h3>Proximadamente agregaremos un panel administrativo para usted 😋</h3>
 </asp:Content>
 

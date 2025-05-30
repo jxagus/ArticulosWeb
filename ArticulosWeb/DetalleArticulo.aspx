@@ -19,7 +19,6 @@
             <hr />
             <h5 class="text-secondary">Descripción del producto</h5>
             <p><%: ArticuloDetalle.Descripcion %></p>
-            <h3>Mensaje subliminal, te amo amorcito si lees esto hace el tuquito</h3>
         </div>
     </div>
 </div>
