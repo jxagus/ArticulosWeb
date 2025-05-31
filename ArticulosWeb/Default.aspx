@@ -41,7 +41,7 @@
         </div>
         <% } %>
     </div>
-
+    <br />
     <!-- Nuestros productos destacados -->
     <h2>Otros de nuestros productos</h2>
     <div class="col-6">

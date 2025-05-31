@@ -75,7 +75,7 @@
                             else
                             {
                         %>
-                        <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" />
+                        <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" CausesValidation="false" /> <!-- CausesValidation evita que se disparen validadores-->
                         <!-- Nombre del usuario -->
                         <a href="Mi Cuenta.aspx" class="text-light me-2 text-decoration-none d-flex align-items-center">
                             <asp:Label ID="lblUser" CssClass="fw-normal" runat="server" /></a>
