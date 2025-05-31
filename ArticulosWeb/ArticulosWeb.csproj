@@ -168,6 +168,8 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Mi Cuenta.aspx" />
     <Content Include="App.config" />
+    <None Include="Properties\PublishProfiles\TPFinalNivel3Acosta_RamonAgustin.pubxml" />
+    <Content Include="ScriptDB\scriptdbArticulosWeb.ipynb" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
