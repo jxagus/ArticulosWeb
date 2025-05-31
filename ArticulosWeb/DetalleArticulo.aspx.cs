@@ -29,8 +29,14 @@ namespace ArticulosWeb
                     // Mostrar mensaje de error o redirigir
                     Response.Redirect("Default.aspx"); // o mostrar un cartel
                 }
-
             }
+        }
+        public string ObtenerUrlImagen(object imagen)
+        {
+            string url = imagen?.ToString();
+            if (string.IsNullOrEmpty(url) || !url.StartsWith("https"))
+                return "Img/NoDisponible.jpg";
+            return url;
         }
     }
 }

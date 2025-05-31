@@ -9,7 +9,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-5">
-            <img src="<%: string.IsNullOrEmpty(ArticuloDetalle.ImagenUrl) ? "Img/NoDisponible.jpg" : ArticuloDetalle.ImagenUrl %>" 
+            <img src="<%: ObtenerUrlImagen(ArticuloDetalle.ImagenUrl) %>" 
                  class="img-fluid rounded border" 
                  alt="Imagen del artículo" />
         </div>
