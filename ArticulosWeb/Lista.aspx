@@ -18,7 +18,7 @@
                 OnCheckedChanged="chkAvanzado_CheckedChanged" />
         </div>
     </div>
-  <!-- filtro avanzado -->
+    <!-- filtro avanzado -->
     <asp:Panel ID="pnlFiltroAvanzado" runat="server" DefaultButton="btnBuscar" Visible="false">
         <div class="row">
             <div class="col-3">
@@ -99,7 +99,11 @@
             <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
             <asp:BoundField HeaderText="Categoria" DataField="Categoria" />
             <asp:BoundField HeaderText="Descripcion" DataField="Descripcion" />
-            <asp:BoundField HeaderText="Precio" DataField="Precio" />
+            <asp:TemplateField HeaderText="Precio">
+                <ItemTemplate>
+                    <%# "$" + (Math.Truncate(Convert.ToDecimal(Eval("Precio")) * 100) / 100m).ToString("F2") %>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:CommandField HeaderText="Accion" ShowSelectButton="true" SelectText="✍️" />
         </Columns>
     </asp:GridView>

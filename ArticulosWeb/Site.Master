@@ -6,8 +6,10 @@
 <head runat="server">
     <asp:ContentPlaceHolder ID="head" runat="server" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="Content/custom-style.css" rel="stylesheet" /> <!--Estilos personalizados-->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!--test tailwind -->
+    <link href="Content/custom-style.css" rel="stylesheet" />
+    <!--Estilos personalizados-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!--test tailwind -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Articles</title>
@@ -75,10 +77,13 @@
                             else
                             {
                         %>
-                        <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" CausesValidation="false" /> <!-- CausesValidation evita que se disparen validadores-->
+                        <asp:Button Text="Salir" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" runat="server" CausesValidation="false" />
+                        <!-- CausesValidation evita que se disparen validadores-->
                         <!-- Nombre del usuario -->
                         <a href="Mi Cuenta.aspx" class="text-light me-2 text-decoration-none d-flex align-items-center">
-                            <asp:Label ID="lblUser" CssClass="fw-normal" runat="server" /></a>
+                            <asp:Label ID="lblUser" CssClass="fw-normal text-decoration-underline" runat="server" />
+                        </a>
+
 
                         <%} %>
                         <!-- Imagen de perfil -->

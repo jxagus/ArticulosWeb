@@ -20,7 +20,7 @@
 
                     <div class="p-4">
                         <h5 class="text-lg font-semibold text-gray-900 mb-2"><%# Eval("Nombre") %></h5>
-                        <p class="text-gray-700 text-sm mb-4">$<%# Eval("Precio") %></p>
+                        <p class="text-gray-700 text-sm mb-4"><%# "$" + (Math.Truncate(Convert.ToDecimal(Eval("Precio")) * 100) / 100m).ToString("F2") %></p>
                         <a href='DetalleArticulo.aspx?id=<%# Eval("Id") %>'
                             class="inline-block px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition">Ver Detalles
                         </a>
