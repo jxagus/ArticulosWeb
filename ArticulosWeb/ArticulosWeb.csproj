@@ -106,6 +106,12 @@
     <Content Include="FormularioArticulo.aspx" />
     <Content Include="Gestion.aspx" />
     <Content Include="Img\BackGround.png" />
+    <Content Include="Img\Capturas\ScreamAgregar.png" />
+    <Content Include="Img\Capturas\ScreamFiltro.png" />
+    <Content Include="Img\Capturas\ScreamInicio.png" />
+    <Content Include="Img\Capturas\ScreamLista.png" />
+    <Content Include="Img\Capturas\ScreamPreguntas.png" />
+    <Content Include="Img\Capturas\ScreamUser.png" />
     <Content Include="Img\Fondo.jpg" />
     <Content Include="Img\FondoDePantalla.png" />
     <Content Include="Img\index.png" />
