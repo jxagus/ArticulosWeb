@@ -1,45 +1,60 @@
 # TP Final Nivel 3 – Gestión de Artículos
 
-Este proyecto es una aplicación web desarrollada en **C#**, con la principal funcion de que un negocio pueda publicitar su caralago de articulos. Articulos que estan en una Base de datos **Sql**.
+Este proyecto es una aplicación web desarrollada en **C#**, con la función principal de permitir que un negocio publique su catálogo de artículos. Los artículos están almacenados en una base de datos **SQL Server**.
 
 ## 💻 Funciones
-El usuario puede: 
-Mirar el catalago desde un unicio con las recomendaciones de articulos y/o ver el catalago completo. 
-Puede utilizar el filtro inteligente y rapido para buscar algo en especifico (sea marca/tipo/nombre del articulo)
-Registrarse y recibir notificaciones por email cuando hayan novedades o descuentos.
-Puede resolver sus dudas de manera general en un apartado de preguntas frecuentes, o tambien preguntarlas directamente escribiendo un email.
 
-El Admin puede:
-Visualizar, buscar y filtrar artículos según distintos criterios como nombre, código, marca y categoría. 
-También tiene permitido editar, agregar y eliminar artículos desde una base de datos **SQL Server**.
-Tiene un apartado donde puede ver todos los articulos enlistados en una GridView.
+El usuario puede:  
+- Ver el catálogo desde un inicio con recomendaciones de artículos y/o explorar el catálogo completo.  
+- Utilizar un filtro inteligente y rápido para buscar artículos por marca, tipo o nombre.  
+- Registrarse y recibir notificaciones por correo electrónico cuando haya novedades o descuentos.  
+- Resolver dudas a través de una sección de preguntas frecuentes o mediante un correo de contacto.
 
-
-## 📸 Capturas
-
-**Vista principal del catálogo**  
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamInicio.png?raw=true" width="600"/>
-
-**Vista FiltroUsuario del catálogo**  
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamFiltro.png?raw=true" width="600"/>
-
-**Vista ListaAdmin del catálogo**  
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamLista.png?raw=true" width="600"/>
-
-**Vista AgregarArticulo del catálogo**  
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamAgregar.png?raw=true" width="600"/>
+El administrador puede:  
+- Visualizar, buscar y filtrar artículos según nombre, código, marca y categoría.  
+- Editar, agregar y eliminar artículos en la base de datos **SQL Server**.  
+- Acceder a una vista tipo GridView con todos los artículos listados.
 
 
-## 🧰 Tecnologías utilizadas
+<h2>📸 Capturas</h2>
 
-- ASP.NET Web forms
-- C# .NET Framework
-- Bootstrap & TailwindCss
-- SQL Server
-- ADO.NET
-- HTML5, CSS3, JS
-- MailTrap
-- POO (Programación Orientada a Objetos)
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamInicio.png?raw=true" width="300"/><br/>
+      <b>Inicio</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamFiltro.png?raw=true" width="300"/><br/>
+      <b>Filtro Usuario</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamLista.png?raw=true" width="300"/><br/>
+      <b>Lista Admin</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamAgregar.png?raw=true" width="300"/><br/>
+      <b>Agregar Artículo</b>
+    </td>
+  </tr>
+</table>
+
+
+## 🧰 Tecnologías 
+
+- **ASP.NET Web Forms**
+- **C# (.NET Framework)**
+- **SQL Server**
+- **ADO.NET** 
+- **HTML5, CSS3, JavaScript**
+- **Bootstrap** & **Tailwind CSS**
+- **MailTrap**
+- **Arquitectura en capas**
+- **Validaciones**
+- **POO (Programación Orientada a Objetos)**
+
 
 ## ⚙️ Instalación
 
