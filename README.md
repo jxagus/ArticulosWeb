@@ -6,17 +6,17 @@ Permite visualizar, buscar y filtrar artículos según distintos criterios como 
 
 ## 📸 Capturas
 
-![Vista principal del catálogo]
+**Vista principal del catálogo**  
 <img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamInicio.png?raw=true" width="600"/>
 
-![Vista FiltroUsuario del catálogo]
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamFiltro?raw=true" width="600"/>
+**Vista FiltroUsuario del catálogo**  
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamFiltro.png?raw=true" width="600"/>
 
-![Vista ListaAdmin del catálogo]
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamLista?raw=true" width="600"/>
+**Vista ListaAdmin del catálogo**  
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamLista.png?raw=true" width="600"/>
 
-![Vista AgregarArticulo del catálogo]
-<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamAgregar?raw=true" width="600"/>
+**Vista AgregarArticulo del catálogo**  
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamAgregar.png?raw=true" width="600"/>
 
 
 ## 🧰 Tecnologías utilizadas
