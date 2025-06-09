@@ -1,8 +1,19 @@
 # TP Final Nivel 3 – Gestión de Artículos
 
-Este proyecto es una aplicación web desarrollada en **C# con .NET y ASP.NET** para publicitar el caralago de un negocio. 
-Tiene
-Permite visualizar, buscar y filtrar artículos según distintos criterios como nombre, código, marca y categoría. También permite editar, agregar y eliminar artículos desde una base de datos **SQL Server**.
+Este proyecto es una aplicación web desarrollada en **C#**, con la principal funcion de que un negocio pueda publicitar su caralago de articulos. Articulos que estan en una Base de datos **Sql**.
+
+## 💻 Funciones
+El usuario puede: 
+Mirar el catalago desde un unicio con las recomendaciones de articulos y/o ver el catalago completo. 
+Puede utilizar el filtro inteligente y rapido para buscar algo en especifico (sea marca/tipo/nombre del articulo)
+Registrarse y recibir notificaciones por email cuando hayan novedades o descuentos.
+Puede resolver sus dudas de manera general en un apartado de preguntas frecuentes, o tambien preguntarlas directamente escribiendo un email.
+
+El Admin puede:
+Visualizar, buscar y filtrar artículos según distintos criterios como nombre, código, marca y categoría. 
+También tiene permitido editar, agregar y eliminar artículos desde una base de datos **SQL Server**.
+Tiene un apartado donde puede ver todos los articulos enlistados en una GridView.
+
 
 ## 📸 Capturas
 
@@ -27,6 +38,7 @@ Permite visualizar, buscar y filtrar artículos según distintos criterios como 
 - SQL Server
 - ADO.NET
 - HTML5, CSS3, JS
+- MailTrap
 - POO (Programación Orientada a Objetos)
 
 ## ⚙️ Instalación
