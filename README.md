@@ -6,6 +6,7 @@ Este proyecto es una aplicación web desarrollada en **C#**, con la función pri
 
 El usuario puede:  
 - Ver el catálogo desde un inicio con recomendaciones de artículos y/o explorar el catálogo completo.  
+- Ver detalles del producto.
 - Utilizar un filtro inteligente y rápido para buscar artículos por marca, tipo o nombre.  
 - Registrarse y recibir notificaciones por correo electrónico cuando haya novedades o descuentos.  
 - Resolver dudas a través de una sección de preguntas frecuentes o mediante un correo de contacto.
