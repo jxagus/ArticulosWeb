@@ -1,15 +1,19 @@
 # TP Final Nivel 3 – Gestión de Artículos
 
-Este proyecto es una aplicación de escritorio desarrollada en **C# con .Net** para la gestión de un catálogo de artículos. 
+Este proyecto es una aplicación web desarrollada en **C# con .NET y ASP.NET** para publicitar el caralago de un negocio. 
+Tiene
 Permite visualizar, buscar y filtrar artículos según distintos criterios como nombre, código, marca y categoría. También permite editar, agregar y eliminar artículos desde una base de datos **SQL Server**.
 
 ## 📸 Capturas
 
-
-![Vista principal del catálogo]([https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/Capturas/vista_principal.png](https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamInicio.png))
-![Vista FiltroUsuario del catálogo](https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamFiltro.png)
-![Vista ListaAdmin del catálogo](https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamLista.png)
-![Vista AgregarArticulo del catálogo](https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamAgregar.png)
+![Vista principal del catálogo]
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamInicio.png?raw=true" width="600"/>
+![Vista FiltroUsuario del catálogo]
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamFiltro?raw=true" width="600"/>
+![Vista ListaAdmin del catálogo]
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamLista?raw=true" width="600"/>
+![Vista AgregarArticulo del catálogo]
+<img src="https://github.com/jxagus/TPFinalNivel3Acosta_RamonAgustin/blob/main/ArticulosWeb/Img/Capturas/ScreamAgregar?raw=true" width="600"/>
 
 
 ## 🧰 Tecnologías utilizadas
